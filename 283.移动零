@@ -1,0 +1,21 @@
+//给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序
+//nums非零元素有序
+
+void moveZeroes(vector<int>& nums) {
+    int i = 0; j = 0;
+    //j代表零元素的位置
+    for (i = 0; i < nums.size(); i++) 
+    {
+        if (nums[i] != 0)
+        {
+            nums[j++] = nums[i];
+        }
+    }
+    while (j < nums.size())
+    {
+        nums[j++] = 0;
+    }
+}
+
+
+
